@@ -1,8 +1,8 @@
 export default (() => {
   const appendPizzas = () =>{
     const sources = ['hawaiian', 'margheritta', 'mexican', 'pepperoni', 'shrimps', 'vegetarian'];
-    let pizzaContent = "";
-    sources.forEach( src => {
+    let pizzaContent = '';
+    sources.forEach((src) => {
       pizzaContent += `<div class="content-body-menu-item">
                         <h1 class="content-body-menu-item-title"> ${src.toUpperCase()} </h1>
                         <img class="content-body-menu-item-img" src='assets/img/${src}.jpg' >

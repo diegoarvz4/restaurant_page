@@ -1,4 +1,4 @@
-export default (() =>{
+export default (() => {
   const create = () => {
     const contactContent = document.createElement('div');
     contactContent.classList.add('content-body-contact');
