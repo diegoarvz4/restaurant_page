@@ -1,5 +1,5 @@
 export default (() => {
-  const aboutText = () =>{
+  const aboutText = () => {
     const text = `Welcome to he best pizzas from Cuernavaca, México.
                 Explore the italian tradition with new mixes of our
                 own culture. New flavors are new experiences.

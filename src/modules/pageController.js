@@ -8,21 +8,17 @@ import contact from './contact';
 
 export default (() => {
   const content = document.getElementById('content');
-  const headerNode = () => {
-    return header.create();
-  };
-  const navbarNode = () => {
-    return navbar.create();
-  };
-  const bodyNode = () => {
-    return body.create();
-  };
-  const footerNode = () => {
-    return footer.create();
-  };
+  const headerNode = () => header.create();
+  const navbarNode = () => navbar.create();
+  const bodyNode = () => body.create();
+  const footerNode = () => footer.create();
   const unselectPreviousNavItem = () => {
     const previous = document.getElementsByClassName('content-nav-list-item__selected')[0];
     previous.classList.remove('content-nav-list-item__selected');
+  };
+  const removeFromBody = (node) => {
+    const bodyContent = document.getElementById('content-body');
+    bodyContent.removeChild(node);
   };
   const unappendPreviousBodyContent = () => {
     const previousBody = document.getElementById('content-body').firstElementChild;
@@ -35,18 +31,21 @@ export default (() => {
     const bodyContent = document.getElementById('content-body');
     bodyContent.appendChild(node);
   };
+  const initializeNode = (node) => {
+    node.classList.add('content-init');
+    return node;
+  };
   const appendNewBodyContent = (id) => {
-    switch (id)
-    {
+    switch (id){
       case 'Menu':
-          appendToBody(initializeNode(menu.create()));
-          break;
+        appendToBody(initializeNode(menu.create()));
+        break;
       case 'Contact':
-          appendToBody(initializeNode(contact.create()));
-          break;
+        appendToBody(initializeNode(contact.create()));
+        break;
       default:
-          appendToBody(initializeNode(about.create()));
-          break;
+        appendToBody(initializeNode(about.create()));
+        break;
     }
   };
   const addEventListeners = () => {
@@ -60,22 +59,14 @@ export default (() => {
       });
     }
   };
-  const removeFromBody = (node) => {
-    const bodyContent = document.getElementById('content-body');
-    bodyContent.removeChild(node);
-  };
-  const initializeNode = (node) => {
-    node.classList.add('content-init');
-    return node;
-  };
-  const load = () => {    
-    content.appendChild(headerNode());                    
+  const load = () => {
+    content.appendChild(headerNode());
     content.appendChild(navbarNode());
     content.appendChild(bodyNode());
     content.appendChild(footerNode());
   };
   const init = () => {
-    const navItem = document.getElementById('About');    
+    const navItem = document.getElementById('About');
     selectNavItem(navItem);
     const node = initializeNode(about.create());
     appendToBody(node);
