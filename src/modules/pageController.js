@@ -1,6 +1,7 @@
 import { navbar }  from './navbar.js'
 import { header }  from './header.js'
 import { body }  from './body.js'
+import { footer }  from './footer.js'
 import { about } from './about.js'
 import { menu } from './menu.js'
 import { contact } from './contact.js'
@@ -17,6 +18,10 @@ const page = (() => {
   };
   const bodyNode = () => {
     return body.create();
+  }
+
+  const footerNode = () => {
+    return footer.create();
   }
 
   const addEventListeners = () =>{
@@ -82,6 +87,7 @@ const page = (() => {
     content.appendChild(headerNode());                    
     content.appendChild(navbarNode());
     content.appendChild(bodyNode());
+    content.appendChild(footerNode());
   };
 
   let init = () => {
