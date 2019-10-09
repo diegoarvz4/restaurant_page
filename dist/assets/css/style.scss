@@ -54,11 +54,23 @@ table {
  height: 500px;
  width: 80%;
  margin: 0 auto;
-	&-header{
+
+ &-init{
+	opacity: 1;
+	position: relative;
+	transform: translateY(50px);
+	animation-name: init-anim;
+	animation-duration: 0.8s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+ }
+	
+ &-header{
 		text-align: center;
     padding: 80px;
     font-size: 50px;
 	}
+	
 	&-nav{
 		display: flex;
 		justify-content: center;
@@ -70,8 +82,34 @@ table {
 			&-item{
 				padding: 20px;
 				font-size: 40px;
+				transition: all 0.4s;
+				&:hover{
+					background-color: bisque;
+					cursor: pointer;
+				}
+				&__selected{
+					background-color: white;
+				}
 			}
 		}
 	}
 
+	&-body{
+		min-height: 300px;
+		background-color: aquamarine;
+		padding: 30px;
+		transition: all 0.4s;
+	}
+
+}
+
+@keyframes init-anim {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+  to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
