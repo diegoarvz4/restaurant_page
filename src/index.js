@@ -1,4 +1,4 @@
-import { page } from './modules/pageController.js';
+import page from './modules/pageController.js';
 
 (() => { 
   page.load();
