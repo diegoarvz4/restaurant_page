@@ -36,7 +36,7 @@ export default (() => {
     return node;
   };
   const appendNewBodyContent = (id) => {
-    switch (id){
+    switch (id) {
       case 'Menu':
         appendToBody(initializeNode(menu.create()));
         break;
@@ -50,7 +50,7 @@ export default (() => {
   };
   const addEventListeners = () => {
     const navButtons = document.getElementsByClassName('content-nav-list-item');
-    for (let i = 0; i < navButtons.length; i += 1){
+    for (let i = 0; i < navButtons.length; i += 1) {
       navButtons[i].addEventListener('click', (e) => {
         unselectPreviousNavItem();
         unappendPreviousBodyContent();

@@ -1,5 +1,5 @@
 export default (() => {
-  const appendPizzas = () =>{
+  const appendPizzas = () => {
     const sources = ['hawaiian', 'margheritta', 'mexican', 'pepperoni', 'shrimps', 'vegetarian'];
     let pizzaContent = '';
     sources.forEach((src) => {
