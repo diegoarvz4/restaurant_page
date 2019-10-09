@@ -1,5 +1,4 @@
-const footer = (() => {
-
+const footer = (() => { 
   let create = () => {
     let footerNode = document.createElement('div')
     footerNode.classList.add('content-footer')

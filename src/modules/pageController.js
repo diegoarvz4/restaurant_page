@@ -33,7 +33,7 @@ const page = (() => {
         selectNavItem(document.getElementById(e.target.id))
         appendNewBodyContent(e.target.id);
       });
-    };
+    }
   };
 
   const unselectPreviousNavItem = () => {
@@ -55,16 +55,13 @@ const page = (() => {
     switch (id)
     {
       case 'Menu':
-          let node_menu = initializeNode(menu.create());
-          appendToBody(node_menu);
+          appendToBody(initializeNode(menu.create()));
           break;
       case 'Contact':
-          let node_contact = initializeNode(contact.create());
-          appendToBody(node_contact);
+          appendToBody(initializeNode(contact.create()));
           break;
       case 'About':
-          let node_about = initializeNode(about.create());
-          appendToBody(node_about);
+          appendToBody(initializeNode(about.create()));
           break;
     }
   }
