@@ -115,6 +115,7 @@ html {
 
 .content-nav-list-item:hover {
   background-color: #FFFFFF;
+  color: #3D1308;
   cursor: pointer;
 }
 
